@@ -1,0 +1,23 @@
+.layout-3-column {
+  @include columns($width: 25%);
+  @include media-tablet {
+    @include columns($width: 30%);
+  }
+}
+
+.layout-2-column {
+  gap: 40.8rem;
+  flex-wrap: nowrap;
+  @include columns($width: 50%);
+  @include media-laptop  {
+    gap: 20rem;
+  }
+  @include media-tablet {
+    gap: 1rem;
+  }
+  @include media-mobile {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}

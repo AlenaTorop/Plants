@@ -1,0 +1,22 @@
+.footer-nav {
+  padding: 4rem 0;
+  align-items: center;
+  @include media-tablet {
+    flex-direction: column;
+    padding-top: 3rem;
+    gap: 5px;
+  }
+  @include media-mobile {
+    padding: 1rem;
+  }
+}
+
+.my-gh {
+  font-weight: 400;
+  @include fonts(2rem, 5rem, 400, #000000)
+}
+
+.footer-nav__links {
+  display: flex;
+  gap: 2rem;
+}

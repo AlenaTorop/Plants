@@ -1,0 +1,121 @@
+.accordion-container {
+  margin-top: 6rem;
+  padding: 3.4rem 4.1rem;
+  border: 1px solid $color-border;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  // opacity: 1;
+  @extend %transition;
+  @include media-tablet {
+    padding-top: 3rem;
+  }
+  @include media-mobile {
+    padding: 2.9rem 2.2rem;
+    margin-top: 4rem;
+    gap: 1.3rem;
+
+  }
+}
+
+.accordion-container__tab input {
+  display: none;
+}
+
+.tab-content {
+  // display: none;
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  @extend %transition;
+  &::before{
+    content: '';
+    display: block;
+    height: 1px;
+    background: #AEA1A1;
+    margin-top: 12px;
+  }
+}
+
+.accordion-container__tab {
+  @include fonts (1rem, 1rem, 300, $color-tag);
+  background: $color-background;
+  border-radius: 20px;
+  width: 17rem;
+  padding: 1.6rem 4rem;
+  @extend %transition;
+  @include media-tablet {
+    padding-top: 1.4rem;
+  }
+  @include media-mobile {
+    padding: 1.5rem 3rem;
+    width: 12rem;
+  }
+  &.open {
+    background-color: #D6E7D2;
+  }
+}
+
+
+.tab-title {
+  @include fonts (2rem, 2rem, 700, black);
+  display: flex;
+  justify-content: space-between;
+  @include media-mobile {
+    @include fonts (1.5rem, 2rem, 700, black);
+  }
+}
+
+.tab-title p {
+  margin: 0;
+}
+
+.btn-accordion {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  background: #D9D9D9;
+  border-radius: 50%;
+  position: relative;
+  align-items: flex-end;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-accordion::after {
+  content: url('../img/svg/arrow.svg');
+  // width: 4px;
+  position: absolute;
+  // left: 5px;
+  // top: -7px;
+  top: -35%;
+  background-repeat: no-repeat;
+}
+
+.price {
+  @include fonts(1.6rem, 2rem, 700, $color-brend);
+  margin-right: 3px;
+  &:before{
+    content: '$';
+    @include fonts(1.2rem, 2rem, 700, $color-brend);
+  }
+}
+
+.order-btn {
+  border-radius: 20px;
+  background-color: #fff;
+  border: none;
+  padding: 3px 20px;
+}
+
+
+.rotate {
+  transform: rotate(180deg);
+  background-color: #AEA1A1;
+}
+.open {
+  // display: block;
+  opacity: 1;
+  height: auto;
+}

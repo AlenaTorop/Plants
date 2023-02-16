@@ -1,0 +1,31 @@
+.header {
+  background-color: $color-background;
+  padding: 4.2rem 0;
+  @include media-tablet {
+    padding: 3.4rem 0;
+  }
+  @include media-mobile {
+    padding: 3.6rem 0;
+  }
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.header-nav__list {
+  display: flex;
+  list-style: none;
+}
+
+.header-nav__item {
+  padding: 0 2.3rem;
+}
+
+.header-nav__item:last-child {
+  padding: 0 0 0 2.3rem;
+}
+

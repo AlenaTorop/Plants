@@ -1,0 +1,108 @@
+.service {
+  background-color: $color-background;
+}
+
+.service__content {
+  display: flex;
+  align-items: center;
+  gap: 16.2rem;
+  @include media-laptop {
+    gap: 8rem;
+  }
+  @include media-additional {
+    gap: 1rem;
+  }
+  @include media-tablet {
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  }
+  @include media-mobile {
+    gap: 2rem;
+  }
+}
+
+.service .layout-3-column {
+  margin-top: 5.6rem;
+  padding-bottom: 11.3rem;
+  gap: 5.5rem;
+  flex-wrap: wrap;
+  @include media-laptop {
+  justify-content: space-around;
+  }
+  @include media-tablet {
+    margin-top: 3rem;
+    gap: 4rem;
+    padding-bottom: 6.8rem;
+  }
+  @include media-mobile {
+    justify-content: center;
+    margin-top: 4rem;
+    padding-bottom: 3rem;
+    gap: 3.2rem;
+  }
+}
+
+.service__title {
+  margin-top: 4rem;
+  font-family: 'Inika';
+  @include fonts(4rem, 5.2rem, 400, $color-additional);
+  @include media-laptop {
+    margin-top: 6rem;
+    @include fonts(3.5rem, 4.6rem, 400, $color-additional);
+  }
+  @include media-mobile {
+    @include fonts(2.5rem, 3.3rem, 400, $color-additional);
+    margin-top: 3rem;
+  }
+}
+
+.service__btns {
+  margin-top: 1.6rem;
+  display: flex;
+  gap: 3.8rem;
+
+  @include media-tablet {
+    margin-top: 0;
+  }
+  @include media-mobile {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $color-border;
+  border-radius: 20px;
+  @include media-tablet {
+    flex-basis: 30%;
+  }
+  &.active {
+    filter: blur(10px);
+    @extend %transition;
+  }
+}
+
+.img {
+  border-radius:  20px 20px 0px 0px;
+  @include media-tablet {
+   width: 281px;
+   height: 350px;
+   object-fit: cover;
+  }
+}
+
+.card__text {
+  margin: 0;
+  padding-bottom: 3.6rem;
+  padding-top: 3px;
+  @include fonts(1.6rem, 2rem, 400, $color-tag);
+  @include media-tablet {
+    padding: 0px 37px 20px 40px;
+    text-align: center;
+  }
+}
+

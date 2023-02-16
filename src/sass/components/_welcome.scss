@@ -1,0 +1,75 @@
+.welcome {
+  background-color: $color-background;
+}
+
+.welcome__container {
+  display: flex;
+  justify-content: center;
+  padding: 6.2rem 0;
+  gap: 22.5rem;
+  @include media-laptop {
+    gap: 2rem;
+    padding: 6.2rem 1rem;
+  }
+  @include media-tablet {
+    gap: 4.2rem;
+    @include fonts (16px, 25px, 400, $color-text);
+    padding: 4.2rem 5rem 7rem 5rem;
+  }
+  @include media-mobile {
+    padding: 0 2.5rem;
+  }
+}
+
+.welcome__title {
+  margin-top: 3.6rem;
+  @include fonts(4.5rem, 5rem, 700, $color-tag);
+  @include media-tablet {
+    @include fonts (3.5rem, 5rem, 700, $color-text);
+    margin-top: 0;
+  }
+  @include media-mobile {
+    @include fonts (2.5rem, 3.5rem, 700, $color-text);
+    padding-top: 2.4rem;
+  }
+}
+
+
+.welcome__text {
+  font-family: 'Inter', sans-serif;
+  margin: 4.2rem 0 4.8rem 0;
+  @include fonts(2rem, 3.5rem, 400, $color-text);
+  @include media-tablet {
+    @include fonts(1.6rem, 2.5rem, 400, $color-text);
+    padding-left: 5px;
+    margin-top: 3rem;
+    margin-bottom: 3.3rem;
+  }
+  @include media-mobile {
+    @include fonts(1.6rem, 2.5rem, 400, $color-text);
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.welcome__image {
+  order: 1;
+  @include media-tablet {
+    width: 280px;
+    height: 254px;
+    order: 2;
+  }
+  @include media-mobile {
+    display: none;
+  }
+}
+
+.welcome__content {
+  order: 2;
+  @include media-tablet {
+    order: 1;
+  }
+  @include media-mobile {
+    padding-bottom: 2.4rem;
+  }
+}

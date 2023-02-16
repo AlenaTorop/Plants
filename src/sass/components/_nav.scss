@@ -1,0 +1,51 @@
+
+.header-nav__link {
+  text-decoration: none;
+  font-family: 'Inika';
+  @include fonts(1.6rem, 5rem, 400, $color-link);
+  &:hover {
+    color: $color-brend;
+    @extend %transition;
+  }
+}
+
+.header-nav {
+  @extend %transition;
+  @include media-mobile {
+    position: fixed;
+    width: 70%;
+    height: 100vh;
+    top: 0;
+    // right: -38rem;
+    right: -100%;
+    z-index: 2;
+  }
+  &.open {
+    right: 0;
+    background-color: $color-background;
+  }
+}
+
+.header-nav__list {
+  &.open {
+    flex-direction: column;
+    margin: 5rem 2rem 2rem 2rem;
+  }
+}
+
+.header__shadow {
+  opacity: 0;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  @extend %transition;
+  &.open {
+    opacity: 1;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+  }
+}
+

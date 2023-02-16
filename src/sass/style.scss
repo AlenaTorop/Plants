@@ -1,0 +1,40 @@
+@import "../../node_modules/normalize-scss/sass/normalize/import-now";
+
+
+
+//Abstract
+@import "abstract/constants";
+@import "abstract/placeholders";
+@import "abstract/mixins";
+
+
+//Base
+@import "base/base";
+@import "base/logo";
+@import "base/buttons";
+@import "base/burger";
+@import "base/modal";
+
+//Layouts
+@import "layouts/container";
+@import "layouts/header";
+@import "layouts/columns";
+@import "layouts/footer";
+
+
+//Components
+@import "components/nav";
+@import "components/welcome";
+@import "components/about";
+@import "components/service";
+@import "components/contact";
+@import "components/prices";
+@import "components/accordion";
+@import "components/select";
+
+
+
+
+
+
+

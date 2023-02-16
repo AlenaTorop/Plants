@@ -1,0 +1,38 @@
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 2rem;
+  /* font-family: 'Inika', serif; */
+  font-family: "Inter", sans-serif;
+}
+
+
+// h2 {
+//   font-family: 'Inika', sans-serif;
+//   @include fonts (4rem, 5.2rem, 400, $color-tag);
+// }
+
+h3 {
+  margin: 1rem 0;
+  @include fonts (2rem, 2rem, 700, $color-brend);
+}
+
+
+
+.color-changed {
+  color: $color-additional;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

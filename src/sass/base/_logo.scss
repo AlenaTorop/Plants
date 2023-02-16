@@ -1,0 +1,14 @@
+.logo-path {
+  @extend %transition;
+}
+
+.logo-svg {
+  cursor: pointer;
+  &:hover {
+    .logo-path {
+        fill: #E06733;
+    }
+  }
+}
+
+

@@ -1,0 +1,69 @@
+.prices {
+  padding-bottom: 11.0rem;
+  @include media-tablet {
+    padding-bottom: 8.5rem;
+  }
+  @include media-mobile {
+     padding-bottom: 3.5rem;
+  }
+}
+
+.prices__help {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  @include media-mobile {
+  flex-basis: 100%;
+  align-items: center;
+  }
+}
+
+.prices__help .btn {
+  margin-top: 5px;
+}
+
+.prices__title {
+  font-family: "Inter", sans-serif;
+  text-align: right;
+  margin-top: 4rem;
+  @include fonts(4rem, 4.8rem, 700, #000000);
+  @include media-tablet {
+    padding-left: 1.5rem;
+  }
+  @include media-mobile {
+    padding-left: 0;
+  }
+}
+
+.left {
+  text-align: left;
+  @include media-tablet {
+    @include fonts(3.5rem, 4.2rem, 700, #000000);
+  }
+  @include media-mobile {
+    @include fonts(2.5rem, 3rem, 700, #000000);
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+.prices__img {
+  width: 152px;
+  height: auto;
+  margin-top: 3.9rem;
+  @include media-mobile {
+    display: none;
+  }
+}
+
+.right {
+  @include media-tablet {
+    margin-top: 14rem;
+    @include fonts(2.5rem, 3.5rem, 700, #000000);
+  }
+  @include media-mobile {
+    @include fonts(2rem, 3.5rem, 700, #000000);
+    text-align: center;
+    margin-top: 1rem;
+  }
+}

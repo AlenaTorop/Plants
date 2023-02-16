@@ -1,0 +1,116 @@
+
+.city__container {
+  position: relative;
+  width: 45rem;
+  margin-top: 10.4rem;
+  // overflow: hidden;
+  @include media-laptop {
+    order: 2;
+  }
+  @include media-mobile {
+    width: 30rem;
+    margin-top: 8.4rem;
+  }
+}
+
+.city__name {
+  background-color: #D6E7D2;
+  @include fonts (2rem, 4rem, 400, $color-tag);
+  @extend %transition;
+  letter-spacing: 0.05em;
+  padding: 5px 35px 5px 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px;
+}
+
+.city__select {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transform-origin: 0 0;
+  transform: rotateX(-90deg);
+  transition: .3s linear;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  // padding: 8px 0 30px 20px;
+  padding-bottom: 3rem;
+  border: none;
+  background: #D6E7D2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px;
+  cursor: pointer;
+  @include fonts (1.6rem, 4rem, 400, $color-additional);
+  @include media-mobile {
+    width: 30rem;;
+    // margin-top: 8.4rem;
+  }
+
+}
+
+.city__name::before {
+  content: "\f078";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 17px;
+  right: 3.5rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 5px;
+  line-height: 15px;
+  color: rgba(255, 255, 255, 1);
+  background-color: #AEA1A1;
+  cursor: pointer;
+}
+
+.city__name.open::before {
+  transform: rotate(180deg);
+  background-color: #8BA07E;
+}
+
+
+
+.city__item {
+  padding-top: 12px;
+  padding-left: 2rem;
+  cursor: pointer;
+  @extend %transition;
+  &:hover {
+    color: $color-tag;
+    &::after {
+       background-color: #717171;
+    }
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 85%;
+    margin: -0.5rem 3rem 0 0rem;
+    height: 1px;
+    background-color: #D9D9D9;
+    @extend %transition;
+  // }  &.open{
+  //   font-size: 1.6rem;
+  }
+}
+
+.city__name.open {
+  background: #C1E698;
+  border: 1px solid #D6E7D2;
+  border-radius: 0px;
+}
+
+.city__select.visible {
+  transform: rotateX(0deg);
+  visibility: visible;
+  opacity: 1;
+}
+
+.city {
+  @include media-tablet {
+      order: 2;
+  }
+
+}
